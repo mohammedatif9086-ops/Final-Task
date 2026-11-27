@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصات التعلم الإلكتروني - Google Classroom</title>
+  <style>
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background-color: #f4f7fb;
+      color: #1e293b;
+      margin: 0;
+      padding: 24px;
+      line-height: 1.8;
+      direction: rtl;
+      text-align: right;
+    }
+
+    body.dark-bg {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+
+    .page-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #1a73e8;
+      color: #ffffff;
+      padding: 24px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 26px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .actions {
+      background-color: #ffffff;
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #cbd5e1;
+    }
+
+    body.dark-bg .actions,
+    body.dark-bg .section-box {
+      background-color: #334155;
+      color: #f8fafc;
+      border-color: #475569;
+    }
+
+    button {
+      font-family: inherit;
+      font-size: 15px;
+      padding: 10px 18px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #1a73e8;
+      color: #ffffff;
+    }
+
+    button:hover {
+      background-color: #1557b0;
+    }
+
+    #welcomeBox {
+      display: none;
+      background-color: #e8f0fe;
+      color: #0f172a;
+      border-right: 4px solid #1a73e8;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .section-box {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .section-box h2 {
+      margin-top: 0;
+      color: #1a73e8;
+      font-size: 20px;
+    }
+
+    body.dark-bg .section-box h2 {
+      color: #93c5fd;
+    }
+
+    ul {
+      padding-right: 22px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #94a3b8;
+      padding: 10px 12px;
+      text-align: right;
+    }
+
+    th {
+      background-color: #1a73e8;
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 24px;
+      padding-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>منصات التعلم الإلكتروني: Google Classroom</h1>
+      <p>صفحة بحثية حول دور Google Classroom في تنظيم العملية التعليمية ودعم الطلاب والمعلمين</p>
+    </header>
+
+    <div class="actions">
+      <button type="button" onclick="showWelcome()">رسالة ترحيب</button>
+      <button type="button" onclick="changeBackground()">تغيير لون الخلفية</button>
+    </div>
+
+    <div id="welcomeBox"></div>
+
+    <section class="section-box">
+      <h2>مقدمة عن البحث</h2>
+      <p>
+        تساعد منصات التعلم الإلكتروني على إدارة المقررات الدراسية، ومشاركة المحاضرات والملفات، واستلام التكليفات
+        بطريقة منظمة وسريعة بين الطلاب وأعضاء هيئة التدريس.
+      </p>
+      <p>
+        يُعد <strong>Google Classroom</strong> من أبرز منصات الفصول الافتراضية نظراً لسهولة استخدامه وتكامله مع
+        أدوات Google المختلفة مثل Drive وDocs وMeet.
+      </p>
+    </section>
+
+    <section class="section-box">
+      <h2>أهم مميزات المنصة</h2>
+      <ul>
+        <li>تنظيم الفصول الدراسية والمهام وتحديد مواعيد التسليم بوضوح.</li>
+        <li>إرسال الملاحظات والدرجات للطلاب بشكل مباشر ومنظم.</li>
+        <li>الوصول إلى المحتوى التعليمي في أي وقت ومن أي جهاز متصل بالإنترنت.</li>
+      </ul>
+    </section>
+
+    <section class="section-box">
+      <h2>مقارنة سريعة بين أدوار المعلم والطالب</h2>
+      <table>
+        <tr>
+          <th>المحور</th>
+          <th>المعلم</th>
+          <th>الطالب</th>
+        </tr>
+        <tr>
+          <td>المحتوى الدراسي</td>
+          <td>رفع المحاضرات والروابط والملفات</td>
+          <td>قراءة المواد وتحميلها</td>
+        </tr>
+        <tr>
+          <td>التكليفات</td>
+          <td>إنشاء المهام وتقييمها</td>
+          <td>رفع الحلول ومتابعة الدرجات</td>
+        </tr>
+        <tr>
+          <td>التواصل</td>
+          <td>نشر الإعلانات والرد على الأسئلة</td>
+          <td>طرح الاستفسارات والمشاركة</td>
+        </tr>
+      </table>
+    </section>
+
+    <footer>
+      <p>التكليف النهائي (Final Task) — محمد عاطف السيد محمد (2502570)</p>
+    </footer>
+  </div>
+
+  <script>
+    function showWelcome() {
+      const box = document.getElementById("welcomeBox");
+      box.textContent = "أهلاً بك في صفحتي البحثية حول منصات التعلم الإلكتروني (Google Classroom)!";
+      box.style.display = "block";
+    }
+
+    function changeBackground() {
+      document.body.classList.toggle("dark-bg");
+    }
+  </script>
+</body>
+</html>
